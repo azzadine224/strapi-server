@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_wilaya_dairas",
+  "info": {
+    "displayName": "Daira"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "baladia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "wilaya.baladia"
+    }
+  }
+}

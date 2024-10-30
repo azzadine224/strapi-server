@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "isAvailable": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "base_price": {
+      "type": "decimal",
+      "required": true
+    },
+    "discounted_price": {
+      "type": "decimal"
+    },
+    "VaraintOne": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product-variants.variant-one"
+    },
+    "VariantTwo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product-variants.variant-two"
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "heroimage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "descriptionImages": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "totalquantity": {
+      "type": "integer"
+    },
+    "buying_price": {
+      "type": "integer"
+    }
+  }
+}

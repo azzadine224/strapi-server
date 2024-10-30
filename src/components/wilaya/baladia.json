@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_wilaya_baladias",
+  "info": {
+    "displayName": "Baladia"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
